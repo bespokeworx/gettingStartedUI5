@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+
+
+
+        function pageloaded(){
+            console.log("page loaded");
+
+        }
+
+        function buttonclick()        {
+
+
+            console.log("button click");
+            var date = new Date();
+            console.log(date.getDate());
+            console.log(date.getDay());
+            console.log(date.getMonth());
+            console.log(date.getYear());
+            console.log(date.getUTCMonth());
+
+            console.log(person.getFullName());
+
+            var all = document.getElementsByTagName("*");
+
+            var tags;
+
+            for(i = 0; i < document.all.length; i++)
+            {
+                tag = document.all(i).tagName;
+                tags = tags + "\r" + tag;
+            }
+
+            console.log(tags);
+
+
+
+
+        }
+
+        var person = {
+            firstName:"John",
+            lastName:"Doe",
+            age:50,
+            eyeColor:"blue",
+            getFullName: function(){
+
+                return this.firstName + this.lastName;
+            }
+        };
+
+    </script>
+
+</head>
+<body onload="pageloaded()">
+
+<button onclick="buttonclick()" type="button" id="clickme"></button>
+    click me
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    This is Header
+    <meta charset="UTF-8">
+    <title>First Page</title>
+
+    <link href="style.css" rel="stylesheet" />
+
+    <style type="text/css">
+        label {
+            width: 100px;
+            float: left;
+            background-color: silver;
+        }
+
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #Site {
+            background-image:
+            -moz-linear-gradient(top, lightblue, white);
+            background-image:
+            -webkit-linear-gradient(left, lightblue, white);
+            box-shadow: 5px 5px 5px #333333;
+            -webkit-box-shadow: 5px 5px 5px #333333;
+            padding: 20px; height: 500px; width: 500px;
+        }
+
+    </style>
+
+
+    <script>
+
+        function pageloaded(){
+            console.log("page loaded");
+
+        }
+
+        function buttonclick()        {
+
+
+            console.log("button click");
+            var date = new Date();
+            console.log(date.getDate());
+            console.log(date.getDay());
+            console.log(date.getMonth());
+            console.log(date.getYear());
+            console.log(date.getUTCMonth());
+
+            console.log(person.getFullName());
+
+            var but = document.getElementById("name");
+            console.log(but.value);
+
+            for( var i = 1 ; i < 10 ; i++) {
+                console.log('*');
+            }
+
+            var oContent = document.getElementById("content");
+            var sOutput;
+            var oOutput = '';
+             var nm = document.getElementById("name")   ;
+
+nm.style.color = '#00FF00';
+
+
+
+            if(  but.value == 'Enter name' ) {
+
+                //var oContent = document.getElementById("content");
+                //oContent.innerHTML = "Enter All mandatory fields";
+
+
+
+            }else{
+                 oContent.innerHTML = 'adasda';
+                   //alert("submitted");
+                   // document.getElementById("myForm").submit();
+            }
+
+
+
+
+
+
+        }
+
+        var person = {
+            firstName:"John",
+            lastName:"Doe",
+            age:50,
+            eyeColor:"blue",
+            getFullName: function(){
+
+                return this.firstName + this.lastName;
+            }
+        };
+
+    </script>
+</head>
+
+<body>
+<div id="Site">
+<form  id="myForm" action="http://bespokeworx.com">>
+
+    <fieldset id="timesheet">
+
+
+        <legend>Time sheet</legend>
+        <label for="name" style="background-color:yellow";> Name </label>
+        <input id="name" type="text" name="name"  value="Enter name">
+
+        <br>
+
+
+        <label for="task"> Task</label>
+        <select id="task" name="task" size="1">
+        <option value="blueprint">Blue Print</option>
+        <option value="build">Build</option>
+        </select>
+
+        <br>
+
+        <label for="hours">Hour</label>
+        <input type="number" name="hour"
+               min="0" max="8"
+               id="hours">
+
+        <br>
+        <label for="desc">Description</label>
+        <textarea id="desc" name="desc" rows="3"></textarea>
+
+        <br>
+        <label for="BILL">Billabel</label>
+        <input type="checkbox" name="billing"  id="BILL">
+        <br>
+
+        <div id="content">
+            <!-- Output from JavaScript -->
+        </div>
+
+        <br>
+<!--
+        <input type="button" onclick="buttonclick()" value="Submit form">
+-->
+        <button class="button" type="button" onclick="buttonclick( )">Submit
+        </button>
+
+
+
+    </fieldset>
+
+</form>
+</div>
+<body>
+
+<footer> This is footer</footer>
+
+
+</html>

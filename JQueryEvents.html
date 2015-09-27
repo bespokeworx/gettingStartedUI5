@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js">
+    </script>
+
+    <style>
+
+        .gray {
+            background-color: gray
+        }
+        .l_gray {
+            background-color: lightblue;
+        }
+        .border {
+            width: 90px;
+            height: 90px;
+            border: 5px solid black
+        }
+        .noborder {
+            width: 100px;
+            height: 100px;
+            border: none
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+                            $("#Site").mouseover(function() {
+                                console.log('mouse over');
+                                $(this).removeClass("gray");
+                                $(this).addClass("l_gray");
+                            });
+
+                            $("#Site").mouseout(function() {
+                                console.log('mouse out');
+                               // $("#Site").text("Val OR Text");
+                                $("#Site").removeClass("l_gray");
+                                $("#Site").addClass("gray");
+                            });
+
+            $("#2").mouseout(function() {
+                console.log('mouse out');
+                 $("#2").text("Val OR Text");
+                $("#2").removeClass("l_gray");
+                $("#2").addClass("gray");
+            });
+
+                            $("#name").mouseup(function() {
+                                console.log('mouse up', $("#name"));
+                                $("#name").val("Dude I know u r Rangu") ;
+
+
+                            });
+                    });
+    </script>
+
+
+</head>
+
+
+
+
+<body>
+
+
+<div id="Site" class="gray">
+    <form  id="myForm" action="http://bespokeworx.com">>
+
+        <fieldset id="timesheet">
+
+
+            <legend>Time sheet</legend>
+            <label for="name" style="background-color:yellow";> Name </label>
+            <input id="name" type="text" name="name"  value="Enter name">
+
+            <br>
+
+
+            <label for="task"> Task</label>
+            <select id="task" name="task" size="1">
+                <option value="blueprint">Blue Print</option>
+                <option value="build">Build</option>
+            </select>
+
+            <br>
+
+            <label for="hours">Hour</label>
+            <input type="number" name="hour"
+                   min="0" max="8"
+                   id="hours">
+
+            <br>
+            <label for="desc">Description</label>
+            <textarea id="desc" name="desc" rows="3" ></textarea>
+
+            <br>
+            <label for="BILL">Billabel</label>
+            <input type="checkbox" name="billing"  id="BILL">
+            <br>
+
+            <div id="content">
+                <!-- Output from JavaScript -->
+            </div>
+
+            <br>
+            <!--
+                    <input type="button" onclick="buttonclick()" value="Submit form">
+            -->
+            <button class="button" type="button" onclick="buttonclick( )">Submit
+            </button>
+
+
+
+        </fieldset>
+
+    </form>
+</div>
+
+<div id="2" >
+
+    div2
+</div>
+
+</body>
+</html>

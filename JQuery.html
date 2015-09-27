@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+
+    <style>
+        p {
+            background-color : light-gray;
+            width : 100px;
+            border : 1px solid black;
+        }
+    </style>
+
+
+    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js">
+    </script>
+
+
+    <script type="text/javascript">
+
+        //register unaanimous function using document.ready call back
+        $(document).ready(
+                                function() {
+                                            $( "#para" ).animate({
+                                                width : "70%",
+                                                opacity : 0.4,
+                                                marginLeft : "0.6in",
+                                                fontSize : "3em",
+                                                borderWidth : "10px"
+                                            }, 1500 );
+                                        }
+                            );
+    </script>
+
+
+</head>
+<body>
+    <p id="para">JQuery ready</p>
+</body>
+</html>
